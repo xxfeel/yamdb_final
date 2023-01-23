@@ -33,9 +33,9 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
     
-    # - name: Pytest tests
-    #   run: |
-    #     pytest
+    - name: Pytest tests
+      run: |
+        pytest
   
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
