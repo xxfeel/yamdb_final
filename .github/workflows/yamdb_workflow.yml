@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # для клонирования репозитория
     - uses: actions/checkout@v2
     - name: Set up Python
       # Запуск actions setup-python — готового скрипта 
