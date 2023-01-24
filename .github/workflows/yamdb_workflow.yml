@@ -61,6 +61,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            ls
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
@@ -86,6 +87,7 @@ jobs:
       run: |
         ls
         pwd
+        cd api_yabdb/
         python manage.py migrate
         python manage.py collectstatic --no-input
         python manage.py loaddata fixtures.json
