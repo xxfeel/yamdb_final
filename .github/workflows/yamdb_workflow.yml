@@ -87,7 +87,7 @@ jobs:
       run: |
         ls
         pwd
-        cd api_yabdb/
+        cd api_yamdb/
         python manage.py migrate
         python manage.py collectstatic --no-input
         python manage.py loaddata fixtures.json
