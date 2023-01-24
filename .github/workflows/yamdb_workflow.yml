@@ -11,7 +11,6 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        # Выбор версии Python
         python-version: 3.7
 
     - name: Install dependencies
@@ -80,8 +79,6 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d
-            sudo docker-compose exec web python manage.py collectstatic --no-input
-            sudo docker-compose exec web python manage.py migrate
 
   send_message_to_telegramm:
     runs-on: ubuntu-latest
