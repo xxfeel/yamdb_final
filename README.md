@@ -28,21 +28,21 @@
 
 1. Склонировать репозиторий в командной строке:
 ```
-git clone https://github.com/IvanFilippov74/infra_sp2
+git clone https://github.com/IvanFilippov74/yamdb_final.git
 ```
 Затем перейдите в корневую директорию проекта:
 ```
-cd infra_sp2/
+cd yamdb_final/
 ```
 2. В корневой директории создайте файл .env, и заполните его:
 ```
-SECRET_KEY=<секретный_ключ_проекта>
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=postgres
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=<ваш_пароль>
 DB_HOST=db
 DB_PORT=5432
+SECRET_KEY=<секретный_ключ_проекта>
 ```
 3. Если Docker не установлен, установите его используя официальную инструкцию:
 ```
@@ -76,7 +76,10 @@ docker-compose exec web python manage.py createsuperuser
 10. Остановить запущенные контейнеры можно командой ```docker-compose stop```, вновь запустить ```docker-compose start```, для остановки и удаления контейнеров используйте команду ```docker-compose down -v```.
 
 *Важное примечание для ОС Linux используйте команду ```sudo```.
-### Авторы
+** Работа контейнеров продемонстрирована здесь:
+- http://158.160.25.236/admin/ - админ-зона.
+- http://158.160.25.236/redoc/ -  документация к API.   
+### Авторы:
 Филиппов Иван
 
 <a href="https://github.com/IvanFilippov74"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
